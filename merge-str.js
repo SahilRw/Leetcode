@@ -40,3 +40,22 @@ var mergeAlternately = function(word1, word2) {
 
     return mergedStr
 };
+
+// my solution 2
+var mergeStrAlternately = function(word1, word2) {
+    const split1 = word1.split('')
+    const split2 = word2.split('')
+
+    const mergedArr = []
+
+    for (let i = 0; i < split1.length || i < split2.length; i++){
+        if (i < split1.length){
+            mergedArr.push(split1[i])
+        }
+        if (i < split2.length){
+            mergedArr.push(split2[i])
+        }
+    }
+
+    return mergedArr.join('')
+};
